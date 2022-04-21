@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="9" failures="0" name="com.example.LionTest" time="0.011" errors="0" skipped="0">
+<testsuite tests="9" failures="0" name="com.example.LionTest" time="0.009" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3.2"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -65,13 +65,13 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.example.LionTest" name="lionShouldHaveKittens[0: sex - Самец, hasMane - true, exception - true]" time="0.002"/>
+  <testcase classname="com.example.LionTest" name="lionShouldHaveKittens[0: sex - Самец, hasMane - true, exception - true]" time="0.001"/>
   <testcase classname="com.example.LionTest" name="lionShouldGetFood[0: sex - Самец, hasMane - true, exception - true]" time="0.004"/>
   <testcase classname="com.example.LionTest" name="lionDoesHaveMane[0: sex - Самец, hasMane - true, exception - true]" time="0.001"/>
   <testcase classname="com.example.LionTest" name="lionShouldHaveKittens[1: sex - Самка, hasMane - false, exception - true]" time="0.001"/>
   <testcase classname="com.example.LionTest" name="lionShouldGetFood[1: sex - Самка, hasMane - false, exception - true]" time="0.001"/>
   <testcase classname="com.example.LionTest" name="lionDoesHaveMane[1: sex - Самка, hasMane - false, exception - true]" time="0"/>
-  <testcase classname="com.example.LionTest" name="lionShouldHaveKittens[2: sex - Оно, hasMane - null, exception - false]" time="0.001"/>
-  <testcase classname="com.example.LionTest" name="lionShouldGetFood[2: sex - Оно, hasMane - null, exception - false]" time="0"/>
-  <testcase classname="com.example.LionTest" name="lionDoesHaveMane[2: sex - Оно, hasMane - null, exception - false]" time="0.001"/>
+  <testcase classname="com.example.LionTest" name="lionShouldHaveKittens[2: sex - Оно, hasMane - null, exception - false]" time="0"/>
+  <testcase classname="com.example.LionTest" name="lionShouldGetFood[2: sex - Оно, hasMane - null, exception - false]" time="0.001"/>
+  <testcase classname="com.example.LionTest" name="lionDoesHaveMane[2: sex - Оно, hasMane - null, exception - false]" time="0"/>
 </testsuite>
