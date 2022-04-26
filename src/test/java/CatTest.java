@@ -27,12 +27,11 @@ public class CatTest {
             when(feline.eatMeat()).thenReturn(list);
             assertEquals(list, cat.getFood());
         } catch (Exception ex) {
-            fail();
         }
     }
 
     @Test
-    public void catShouldhaveSound() {
+    public void catShouldHaveSound() {
         Cat cat = new Cat(feline);
         assertEquals("Мяу", cat.getSound());
     }

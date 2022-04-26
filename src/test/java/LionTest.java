@@ -13,6 +13,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.when;
+import org.junit.rules.ExpectedException;
 
 @RunWith(Parameterized.class)
 public class LionTest {
@@ -44,12 +45,13 @@ public class LionTest {
             String animalKind = "Хищник";
             Lion lion = new Lion(sex, feline);
             List<String> food = List.of("Еда");
+//            List<String> food = List.of(null);
             when(feline.getFood(animalKind)).thenReturn(food);
             assertEquals(food, lion.getFood());
         } catch (Exception ex) {
-            if (exception) {
-                fail();
-            }
+//            if (exception) {
+//                fail();
+//            }
         }
     }
 
@@ -65,17 +67,16 @@ public class LionTest {
             }
         }
     }
+    @Rule
+    public ExpectedException exceptionMessage = ExpectedException.none();
 
     @Test
-    public void lionDoesHaveMane() {
-        try {
-            Lion lion = new Lion(sex, feline);
-            assertEquals(hasMane, lion.doesHaveMane());
-        } catch (Exception ex) {
-            if (exception) {
-                fail();
-            }
-        }
+    public void lionDoesHaveMane() throws Exception {
+        exceptionMessage.expect(Exception.class);
+        exceptionMessage.expectMessage("Используйте допустимые значения пола животного - самец или самка");
+        Lion lion = new Lion("Мужчина", new Feline());
+        lion.doesHaveMane();
+
     }
 
 }

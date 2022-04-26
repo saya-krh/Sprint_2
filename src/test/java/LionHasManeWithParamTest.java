@@ -11,7 +11,7 @@ public class LionHasManeWithParamTest {
 
 
     String sex;
-    Boolean hasMane;
+    boolean hasMane;
 
     public LionHasManeWithParamTest(String sex, Boolean hasMane){
         this.sex=sex;
