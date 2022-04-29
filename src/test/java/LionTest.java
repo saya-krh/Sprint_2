@@ -35,25 +35,27 @@ public class LionTest {
 
     @Test
     public void lionMale() throws Exception {
-        Lion lion = new Lion ("Самец", this.feline);
+        Lion lion = new Lion ("Самец", feline);
         assertTrue(lion.doesHaveMane());
     }
 
     @Test
     public void lionFemale() throws Exception {
-        Lion lion = new Lion ("Самка", this.feline);
+        Lion lion = new Lion ("Самка", feline);
         assertFalse(lion.doesHaveMane());
     }
 
     @Test(expected = Exception.class)
     public void lionInvalidSex() throws Exception {
-        Lion lion = new Lion ("Любой гендер", this.feline);
+        Lion lion = new Lion ("Любой гендер", feline);
     }
 
     @Test
     public void lionFood() throws Exception {
-        Lion lion = new Lion("Самец", this.feline);
-        assertEquals(lion.getFood(), Arrays.asList("Животные", "Птицы", "Рыба"));
+        Lion lion = new Lion("Самец", new Feline());
+        List <String> expectedFood = List.of("Животные", "Птицы", "Рыба");
+        assertEquals(expectedFood, lion.getFood());
+
     }
 
 
