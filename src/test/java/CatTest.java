@@ -20,15 +20,14 @@ public class CatTest {
     public MockitoRule rule = MockitoJUnit.rule();
 
     @Test
-    public void catShouldHaveKittens() {
-        try {
-            Cat cat = new Cat(feline);
-            List<String> list = List.of("Test");
-            when(feline.eatMeat()).thenReturn(list);
-            assertEquals(list, cat.getFood());
-        } catch (Exception ex) {
-        }
+    public void catShouldHaveFood() throws Exception {
+        Cat cat = new Cat(feline);
+        List<String> list = List.of("Test");
+        when(feline.eatMeat()).thenReturn(list);
+        assertEquals(list, cat.getFood());
+
     }
+
 
     @Test
     public void catShouldHaveSound() {

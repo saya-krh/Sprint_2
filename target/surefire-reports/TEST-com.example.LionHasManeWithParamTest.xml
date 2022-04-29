@@ -65,6 +65,6 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.example.LionHasManeWithParamTest" name="shouldMaleLionHasMane[0]" time="0.002"/>
-  <testcase classname="com.example.LionHasManeWithParamTest" name="shouldMaleLionHasMane[1]" time="0"/>
+  <testcase classname="com.example.LionHasManeWithParamTest" name="shouldMaleLionHasMane[0]" time="0.001"/>
+  <testcase classname="com.example.LionHasManeWithParamTest" name="shouldMaleLionHasMane[1]" time="0.001"/>
 </testsuite>
