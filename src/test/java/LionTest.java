@@ -1,5 +1,6 @@
 package com.example;
 
+import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,6 +9,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoJUnitRunner;
+import static org.junit.Assert.assertEquals;
 import org.mockito.junit.MockitoRule;
 
 import java.util.Arrays;;
@@ -52,10 +54,9 @@ public class LionTest {
 
     @Test
     public void lionFood() throws Exception {
-        Lion lion = new Lion("Самец", new Feline());
-        List <String> expectedFood = List.of("Животные", "Птицы", "Рыба");
-        assertEquals(expectedFood, lion.getFood());
-
+        Lion lion = new Lion("Самец", feline);
+        Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+        Assert.assertEquals(feline.getFood("Хищник"),lion.getFood());
     }
 
 
